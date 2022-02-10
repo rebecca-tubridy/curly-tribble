@@ -24,6 +24,7 @@ Things you may want to cover:
 * ...
 
 ```bash
+bundle install
 rails db:migrate
 rails server
 ```
