@@ -14,4 +14,4 @@ class SessionsController < ApplicationController
     session.clear  
     redirect_to root_url, notice: 'Logged out!'   
   end   
-end  
+end

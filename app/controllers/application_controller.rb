@@ -7,4 +7,4 @@ class ApplicationController < ActionController::Base
       User.where(id: session[:user_id]).first   
     end   
     helper_method :current_user   
-  end  
+  end
