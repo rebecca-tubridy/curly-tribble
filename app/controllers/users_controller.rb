@@ -13,10 +13,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    puts("I created the user")
     if @user.save
       session[:user_id] = @user.id
-      puts(session[:user_id])
       redirect_to root_url, notice: 'User successfully created.'
     else
       render :new, status: :unprocessable_entity
