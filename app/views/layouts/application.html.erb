@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= render "/layouts/header" %>
@@ -13,5 +12,10 @@
 
   <body>
     <%= yield %>
+    <% flash.each do |key, value| %>  
+      <%= content_tag(:div, class: "alert alert-#{key}") do %>  
+        <p><%= value %></p>  
+      <% end %>  
+    <% end %>
   </body>
 </html>

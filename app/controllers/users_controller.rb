@@ -13,9 +13,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
+    puts("I created the user")
     if @user.save
-      redirect_to @user
+      session[:user_id] = @user.id
+      puts(session[:user_id])
+      redirect_to root_url, notice: 'User successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -38,8 +40,8 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-
-    redirect_to root_path, status: :see_other
+    session[:user_id] = nil
+    redirect_to login_path, notice: 'Logged out'
   end
 
   private
