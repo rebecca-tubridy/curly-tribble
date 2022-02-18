@@ -1,11 +1,20 @@
-<h1><%= @article.title %></h1>
-
-<p><%= @article.body %></p>
-
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
-</ul>
+<div class="card">
+  <div class="container">
+    <h1><%= @article.title %></h1>
+    <p><%= @article.body %></p>
+    <p>
+      Posted by:
+      <strong><%= current_user %></strong>
+    </p>
+    <p>
+      On <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %>
+    </p>
+    <ul>
+      <li><%= link_to "Edit", edit_article_path(@article) %></li>
+      <li><%= link_to "Destroy", article_path(@article), data: {
+                        turbo_method: :delete,
+                        turbo_confirm: "Are you sure?"
+                      } %></li>
+    </ul>
+  </div>
+</div>

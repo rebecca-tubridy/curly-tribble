@@ -13,9 +13,10 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-
+    @user = User.find(params[:user_id])
+    @article = current_user.articles.build(params[:article])
     if @article.save
-      redirect_to @article
+      redirect_to article_path(@article)
     else
       render :new, status: :unprocessable_entity
     end

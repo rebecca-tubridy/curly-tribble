@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   # get "/users", to: "users#index"
   # get "/users/:id", to: "users#show"
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users
+  resources :users 
+   
 
- 
-  # resources :logins
+
+  # get '/articles', to: 'articles#new' 
   # get "/articles", to: "articles#index"
   # get "/articles/:id", to: "articles#show"
   resources :articles

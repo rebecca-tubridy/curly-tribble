@@ -7,13 +7,14 @@
 
 body {
     font-family: cursive;
+    background-image: url(brooke-lark-pGM4sjt_BdQ-unsplash.jpg);
+
    }
 
 .logo {
     font-size: 32px;
-    color: rgb(255, 255, 255);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    font-weight: 700;
+    color: rgb(250, 249, 240);
+    background: linear-gradient(90deg, rgba(158,198,215,1) 0%, rgb(240, 248, 250) 50%, rgba(158,198,215,1) 100%);    font-weight: 700;
     letter-spacing: 1px;
    }
 
@@ -52,5 +53,26 @@ a {
     color: rgb(37, 37, 37);
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgb(223, 148, 204);
+    background-color: rgb(250, 249, 240);
+    transition: 0.3s;
+    text-align: center;
+    margin-top: 7%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+  
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(146, 196, 230, 0.938);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
 }
 
