@@ -48,15 +48,14 @@ a {
 
 .page-header {
     margin-top: 10%;
-    text-align: left;
-    font-size: 32px;
-    color: rgb(37, 37, 37);
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(250, 249, 240);
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 .card {
-    /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgb(223, 148, 204);
     background-color: rgb(250, 249, 240);
     transition: 0.3s;
@@ -66,13 +65,39 @@ a {
     margin-right: 5%;
 }
   
-/* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(146, 196, 230, 0.938);
 }
 
-/* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
 }
 
+.column {
+    float: left;
+    padding: 0 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.article-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(250, 249, 240);
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20%;
+    }
+  }

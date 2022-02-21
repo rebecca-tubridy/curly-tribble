@@ -4,8 +4,7 @@
     <p><%= @article.body %></p>
     <p>
       Posted by:
-      <strong><%= @article.user_id.full_name %></strong>
-    </p>
+      <strong><%= @article.user.full_name %></strong>    </p>
     <p>
       On <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %>
     </p>
