@@ -1,6 +1,5 @@
 <h1 class="page-header">User Profile</h1>
-<h3><%= @user.first_name %></h3>
-<h3><%= @user.last_name %></h3>
+<h3><%= @user.full_name %></h3>
 <h3><%= @user.email %></h3>
 <h3><%= @user.password %></h3>
 
@@ -27,17 +26,5 @@
 <% end %>
 
 
-<h2>Add a article:</h2>
-<%= form_with model: [ @user, @user.articles.build ] do |form| %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<h2>Add an article:</h2>
+<%= link_to "New Article", new_article_path %>

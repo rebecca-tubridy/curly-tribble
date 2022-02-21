@@ -12,9 +12,11 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    if current_user != nil 
+      puts("This is the current user #{current_user}")    
+    end
     @article = Article.new(article_params)
-    @user = User.find(params[:user_id])
-    @article = current_user.articles.build(params[:article])
+    @article.user_id=current_user.id
     if @article.save
       redirect_to article_path(@article)
     else
