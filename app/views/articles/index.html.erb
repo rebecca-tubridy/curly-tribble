@@ -4,7 +4,19 @@
     <ol>
       <% @articles.each do |article| %>
         <li class="article-card">
-          <%= link_to article.title, article %>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+              </div>
+              <div class="flip-card-back">
+                <h1><%= article.title %></h1>
+                <p><%= article.body %></p>
+                <p><%= article.user.full_name %></p>
+                <p><%= article.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
+                <p><%= link_to "view", article %></p>
+              </div>
+            </div>
+          </div>
         </li>
       <% end %>
     </ol>
@@ -15,5 +27,7 @@
 <button class="btn" style="margin-top: 60px;">
 <%= link_to "New Article", new_article_path %>
 </button>
+
+
 
 

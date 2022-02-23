@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    @articles = Article.all.order("created_at DESC")
   end
 
   def show
@@ -17,6 +18,7 @@ class ArticlesController < ApplicationController
     end
     @article = Article.new(article_params)
     @article.user_id=current_user.id
+    @article = Article.order(created_at: :desc)
     flash[:notice] = "Successfully created the post!"
     if @article.save
       redirect_to article_path(@article)
