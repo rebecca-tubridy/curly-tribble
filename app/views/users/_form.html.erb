@@ -8,7 +8,7 @@
   </div>
 
    <div>
-    <%= form.label :last_name, "Name" %><br>
+    <%= form.label :last_name %><br>
     <%= form.text_field :last_name %>
     <% user.errors.full_messages_for(:last_name).each do |message| %>
       <div><%= message %></div>
