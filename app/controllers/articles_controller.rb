@@ -13,8 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    if current_user != nil 
-      puts("This is the current user #{current_user}")    
+    if current_user != nil    
     end
     @article = Article.new(article_params)
     @article.user_id=current_user.id
