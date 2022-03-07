@@ -14,7 +14,7 @@
                 <p><%= article.user.full_name %></p>
                 <p><%= article.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
                 <p><%= link_to "View", article %></p>
-                <% if current_user %>
+                <% if current_user == article.user %>
                   <p><%= link_to "Edit", edit_article_path(article) %></p>
                   <p><%= link_to "Delete", article_path(article) %></p>
                 <% end %>
