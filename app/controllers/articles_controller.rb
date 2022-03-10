@@ -13,13 +13,13 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    if current_user != nil    
+    if current_user != nil 
     end
     @article = Article.new(article_params)
     @article.user_id=current_user.id
     if @article.save
       redirect_to article_path(@article)
-      flash[:notice] = "Successfully created the post!"
+      flash[:notice] = "Successfully created article!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -38,10 +38,19 @@ class ArticlesController < ApplicationController
     end
   end
 
+
   def destroy
     @article = Article.find(params[:id])
-    @article.destroy
-    redirect_to root_path, status: :see_other
+    puts("Trying to destroy article")
+    if @article.discarded? 
+      puts("About to undo")
+      @article.undiscard
+    else
+      puts("About to discard")
+      @article.discard
+    end
+    puts("Going to redirect")
+    redirect_to root_path, notice: "Article was successfully deleted"
   end
 
   private

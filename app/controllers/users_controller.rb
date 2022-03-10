@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_url, notice: 'User successfully created.'
-    else
+    else 
       render :new, status: :unprocessable_entity, notice: 'User not created'
     end
   end
@@ -28,7 +28,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-
     if @user.update(user_params)
       redirect_to @article
     else

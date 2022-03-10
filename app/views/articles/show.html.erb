@@ -11,10 +11,14 @@
     <ul>
       <% if current_user == @article.user %>
         <li><%= link_to "Edit", edit_article_path(@article) %></li>
-        <li><%= link_to "Destroy", article_path(@article), data: {
-                          turbo_method: :delete,
-                          turbo_confirm: "Are you sure?"
-                        } %></li>
+        <% if @article.discard %>
+          <li><%= link_to "Undo delete", article_path(@article), method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Delete", article_path(@article), data: {
+                            turbo_method: :delete,
+                            turbo_confirm: "Are you sure?"
+                          } %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>
