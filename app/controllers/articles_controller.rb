@@ -41,15 +41,11 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    puts("Trying to destroy article")
     if @article.discarded? 
-      puts("About to undo")
       @article.undiscard
     else
-      puts("About to discard")
       @article.discard
     end
-    puts("Going to redirect")
     redirect_to root_path, notice: "Article was successfully deleted"
   end
 
