@@ -2,8 +2,8 @@
 @import "font-awesome";
 
 body {
-    font-family: sans-serif, 'Courier New', Courier, monospace; 
-    background-image: url(flower.jpg);
+    font-family: sans-serif, 'Courier New', Courier, monospace;
+    background-color: rgb(255, 249, 242);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -11,7 +11,7 @@ body {
 }
 
 a {
-    color: rgb(255, 255, 255)!important;
+    color: #714912!important;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -25,24 +25,45 @@ hr {
     margin-left: 20%;
     margin-right: 20%;
     border: none;
-    border-top: medium double rgb(0, 0, 0);
-    color: rgb(7, 7, 7);
+    border-top: medium double rgb(39, 39, 39);
+    color: rgb(39, 39, 39);
     text-align: center;
 }
 hr:after {
     content: "❁";
-    background-color: #F5F5F3;
+    background-color: rgb(255, 249, 242);
     display: inline-block;
     position: relative;
     top: -0.7em;
     font-size: 1.5em;
     padding: 0 0.30em;
-    background: white;
+}
+
+.hero-image {
+    background-image: url(curly-tribble-cut.jpg);
+    padding-top: 17.5%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .about-us {
     text-align: center;
-    padding-top: 2%;
+    padding: 1%;
+}
+
+.about-us-paragraph {
+    background: rgb(255, 255, 255);
+    border-radius: 5%;
+    box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    width: 50%; 
+    height: 25%;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-bottom: 10%;
+    padding: 5%;
+    text-align: center;
 }
 
 
