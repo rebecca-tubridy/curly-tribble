@@ -1,6 +1,6 @@
 <div class="container-fluid">
 <% if current_user %>
-    <h4> Welcome back <%= current_user.first_name %>! ♥</h4>
+    <h6> Welcome back <%= current_user.first_name %>! ♥</h4>
     <% else %>
     <h2 class="page-header">Welcome to my blog!</h2>
     <p>Not a memeber yet?  <%= link_to 'Register', new_user_path %></p>
@@ -9,9 +9,11 @@
 <% end %>
 <div class="hero-image">
   <div class="hero-text">
-    <h2>Have a look at our awesome recipe articles</h2>
+  <hr>
+    <h2 class="about-us">About us</h2>
     <p></p>
     <button></button>
+  <hr>
   </div>
 </div>
 </div>
