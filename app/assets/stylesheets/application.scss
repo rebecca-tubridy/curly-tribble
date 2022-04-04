@@ -11,6 +11,14 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.navbar-brand {
+    color: #d15f8b!important;
+    margin-right: 1rem;
+    font-size: 2.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
 .page-header {
   text-align: center;
   margin-top: 2%;
@@ -30,8 +38,12 @@ li {
 }
 
 a {
-    color: #4a3a21!important;
+    color: #4a4921!important;
     text-decoration: none;
+}
+
+a:hover {
+    color: #6ca05d!important;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {

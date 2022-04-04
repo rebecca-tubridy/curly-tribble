@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B0C0AC;">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid text-light">
-    <a class="navbar-brand text-light" href="/">Curly-Tribble</a>
+   <h1>
+      <a class="navbar-brand" href="/">Curly-Tribble</a>
+    </h1>
       <button
         class="navbar-toggler"
         type="button"
@@ -51,10 +53,9 @@
   <% if current_user %>
     <h6 class="small"> Welcome back <%= current_user.first_name %>! ♥</h4>
     <% else %>
-    <h2 class="page-header">Welcome to Curly Tribble!</h2>
-    <p>Not a memeber yet?  <%= link_to 'Register', new_user_path %></p>
+    <p class="small">Not a memeber yet?  <%= link_to 'Register', new_user_path %>
     or 
-    <%= link_to 'Login', login_path %> 
+    <%= link_to 'Login', login_path %></p>
   <% end %>
 </nav>
 <div class="hero-image"></div>

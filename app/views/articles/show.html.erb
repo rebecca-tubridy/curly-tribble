@@ -1,5 +1,6 @@
 <div class="card">
-  <div class="container">
+<ol>
+  <div class="container article-card" style="margin-top: 5%;">
     <h1><%= @article.title %></h1>
     <p><%= @article.body %></p>
     <p>
@@ -8,7 +9,6 @@
     <p>
       On <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %>
     </p>
-    <ul>
       <% if current_user == @article.user %>
         <li><%= link_to "Edit", edit_article_path(@article) %></li>
         <% if @article.discard %>
@@ -20,6 +20,6 @@
                           } %></li>
         <% end %>
       <% end %>
-    </ul>
   </div>
+</ol>
 </div>
