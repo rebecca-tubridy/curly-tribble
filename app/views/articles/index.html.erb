@@ -4,11 +4,11 @@
     <ol>
       <% @articles.each do |article| %>
         <li class="article-card">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
+          <div>
+            <div>
+              <div>
               </div>
-              <div class="flip-card-back">
+              <div>
                 <h1><%= article.title %></h1>
                 <p><%= article.body %></p>
                 <p><%= article.user.full_name %></p>

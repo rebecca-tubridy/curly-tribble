@@ -48,5 +48,13 @@
         </ol>
     </div>
   </div>
+  <% if current_user %>
+    <h6 class="small"> Welcome back <%= current_user.first_name %>! ♥</h4>
+    <% else %>
+    <h2 class="page-header">Welcome to Curly Tribble!</h2>
+    <p>Not a memeber yet?  <%= link_to 'Register', new_user_path %></p>
+    or 
+    <%= link_to 'Login', login_path %> 
+  <% end %>
 </nav>
 <div class="hero-image"></div>
