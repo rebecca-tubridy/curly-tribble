@@ -1,11 +1,15 @@
 <hr>
-<h2 class="page-header"> ꧁ Users ꧂</h2>
+   <h2 class="page-header"> ꧁ Users ꧂</h2>
 <hr style="margin-bottom: 2%;">
 <ol>
    <% @users.each do |user| %>
+<% if current_user %>
    <li class="user-card">
       <%= link_to user.full_name, user %>
    </li>
    <% end %>
+<% end %>
 </ol>
-<%= link_to "New User", new_user_path %>
+<div>
+   <%= link_to "New User", new_user_path %>
+</div>
