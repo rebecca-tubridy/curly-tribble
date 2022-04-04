@@ -1,9 +1,9 @@
 <h1 class="page-header">User Profile</h1>
-<h3><%= @user.full_name %></h3>
-<h3><%= @user.email %></h3>
-<h3><%= @user.password %></h3>
+<ol class="user-card">
+  <h3><%= @user.full_name %></h3>
+  <h3><%= @user.email %></h3>
+  <h3><%= @user.password %></h3>
 
-<ul>
   <% if current_user %>
     <li><%= link_to "Edit", edit_user_path(@user) %></li>
     <li><%= link_to "Destroy", user_path(@user), data: {
@@ -11,11 +11,13 @@
                       turbo_confirm: "Are you sure?"
                     } %></li>
   <% end %>
-</ul>
+</ol>
 
 
 <h2>Articles</h2>
+
 <% @user.articles.each do |article| %>
+<ol class="article-card">
   <p>
     <strong>Title:</strong>
     <%= article.title %>
@@ -25,7 +27,9 @@
     <strong>Body:</strong>
     <%= article.body %>
   </p>
+</ol>
 <% end %>
+
 
 
 <h2>Add an article:</h2>
