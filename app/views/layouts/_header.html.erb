@@ -51,7 +51,7 @@
     </div>
   </div>
   <% if current_user %>
-    <h6 class="small"> Welcome back <%= current_user.first_name %>! ♥</h4>
+    <h6 class="small"> Welcome back <strong><%= current_user.first_name %>!</strong></h4>
     <% else %>
     <p class="small">Not a memeber yet?  <%= link_to 'Register', new_user_path %>
     or 

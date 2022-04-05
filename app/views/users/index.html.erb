@@ -1,7 +1,7 @@
 <hr>
    <h2 class="page-header"> ꧁ Users ꧂</h2>
 <hr style="margin-bottom: 2%;">
-<ol>
+<ol style="padding-left: 0px;">
    <% @users.each do |user| %>
 <% if current_user %>
    <li class="user-card">
@@ -11,7 +11,7 @@
 <% end %>
 </ol>
 <div>
-   <button style="margin-left: 46%; margin-bottom: 5%;">
+   <button style="margin-left: 47%; margin-bottom: 5%;">
       <%= link_to "New User", new_user_path %>
    </button>
 </div>

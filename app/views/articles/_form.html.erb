@@ -8,7 +8,7 @@
   </div>
   <div>
     <%= form.label :body %><br>
-    <%= form.text_area :body, :maxlength => 700 %><br>
+    <%= form.text_area :body %><br>
     <% article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
