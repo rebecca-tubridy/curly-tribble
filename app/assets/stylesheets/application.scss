@@ -165,3 +165,10 @@ form {
       width: 100%;
     }
   }
+
+@media screen and (max-width: 768px) {
+    footer{
+        background-image: none!important;
+    }
+      
+}
