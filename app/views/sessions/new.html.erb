@@ -2,15 +2,12 @@
 <h2 class="page-header">꧁ Login ꧂</h2> 
 <hr>  
 <%= form_tag sessions_path do %>   
-<div class="container">
-  <%= label_tag :email %><br>   
-  <%= text_field_tag :email %>
-  <%= label_tag :password %><br>   
-  <%= password_field_tag :password %>   
-   
+<div class="container-form">
+  <p><%= label_tag :email %><br>   
+  <%= text_field_tag :email %></p>
+  <p><%= label_tag :password %><br>   
+  <%= password_field_tag :password %></p> 
+
   <%= submit_tag "Log In" %>
-  <label>
-    <input type="checkbox" checked="checked" name="remember"> Remember me
-  </label>
 </div> 
 <% end %>
