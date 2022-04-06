@@ -19,6 +19,20 @@ body {
     white-space: nowrap;
 }
 
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
 .page-header {
   text-align: center;
   margin-top: 2%;
@@ -165,12 +179,330 @@ form {
     .cancelbtn {
       width: 100%;
     }
+
   }
+@media screen and (min-width: 1024px) {
+    .hide-nav-item {
+        display: none !important;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
-    footer{
+    footer {
         background-image: none!important;
+        
+    }
+
+    .card {
+        background-color: #FFF9F2;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin-top: 3%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .article-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 1%;
+        font-size: 1rem;
+        margin-bottom: 5%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+
+    ol.article-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 1%;
+        font-size: 1rem;
+        margin-left: 20%;
+        margin-bottom: 10%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    .user-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    ol.user-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        margin-left: 20%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    button {
+        margin-left: 45%!important;
+        margin-bottom: 5%;
+    }
+
+    .footer-text {
+        margin-left: 25%;
+    }
+
+    .navbar-brand {
+        color: #d15f8b!important;
+        padding-left: none;
+        font-size: 2rem;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+
+    .member-text {
+        padding-left: 14px;
+    }
+
+    //Setup
+    body {
+        margin: 0;
+        background-color: #FFF9F2;
+    }
+    a {
+        color: #000;
+    }
+    .content{
+        margin-top:25px;
+    }
+  
+  // header 
+  
+    header {
+    
+        background-color: #FFF9F2;
+        width: 100%;
+        z-index: 3;
+    
+    .logo {
+      max-width: 225px;
+      display: block;
+      float: left;
+      font-size: 1em;
+      padding: 10px 20px;
+      text-decoration: none;
+      background:#FFF9F2;
     }
     
+    nav{
+      width: 100%;
+          display: block;	
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: #FFF9F2;
+      }
+      li{
+        display:inline;
+        a {
+          display: block;
+  
+          font-size: 14px;
+          text-decoration: none;
+          color: grey;
+          padding: 5px;
+          &:hover{
+            text-decoration:underline;
+          }
+        }
+      }
+      .menu-btn:hover {
+        background-color: #B0C0AC;
+      }
+  
+      // menu
+      .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+      }
+  
+      // menu icon
+      .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+  
+        .navicon {
+          background: #B0C0AC;
+          display: block;
+          height: 2px;
+          position: relative;
+          transition: .2s ease-out;
+          width: 18px;
+  
+          &:before,
+          &:after{
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+          }
+          &:before{
+            top: 5px;
+          }
+          &:after{
+            top: -5px;
+          }
+        }
+  
+  
+  
+      }
+  
+      // menu btn
+      .menu-btn {
+        display: none;
+  
+        &:checked ~ .menu {
+          max-height: 240px;
+        }    
+        &:checked ~ .menu-icon .navicon {
+          background: transparent;
+          &:before {
+            transform: rotate(-45deg);
+          }
+          &:after {
+            transform: rotate(45deg);
+          }
+  
+        }
+        &:checked ~ .menu-icon:not(.steps) .navicon:before,
+        &:checked ~ .menu-icon:not(.steps) .navicon:after {
+          top: 0;
+        }
+  
+      }
+    }
+  }
+}
+  
+
+@media screen and (max-width: 425px) {
+    footer {
+        background-image: none!important;
+        
+    }
+
+    .card {
+        background-color: #FFF9F2;
+    }
+
+    .footer-text {
+        margin-left: 1%;
+    }
+    
+    .about-us-paragraph {
+        background-image: url(flower.jpg);
+        border-radius: 5%;
+        font-size: 1rem;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+        width: 60%; 
+        height: 25%;
+        margin-top: 2%;
+        margin-left: 20%;
+        margin-bottom: 15%;
+        padding: 2%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin-top: 3%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .article-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 1%;
+        font-size: 1rem;
+        margin-bottom: 5%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+
+    ol.article-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 1%;
+        font-size: 1rem;
+        margin-left: 20%;
+        margin-bottom: 10%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    .user-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    ol.user-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        margin-left: 20%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    button {
+        margin-left: 40%!important;
+        margin-bottom: 5%;
+    }
       
 }

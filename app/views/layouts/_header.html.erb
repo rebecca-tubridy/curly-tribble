@@ -41,12 +41,31 @@
         </ol>
     </div>
   </div>
-  <% if current_user %>
-    <h6 class="small"> Welcome back <strong><%= current_user.first_name %>!</strong></h4>
+    <% if current_user %>
+    <h6 class="small member-text"> Welcome back <strong><%= current_user.first_name %>!</strong></h4>
     <% else %>
-    <p class="small">Not a memeber yet?  <%= link_to 'Register', new_user_path %>
+    <p class="small member-text">Not a memeber yet?  <%= link_to 'Register', new_user_path %>
     or 
     <%= link_to 'Login', login_path %></p>
   <% end %>
+  <header>
+  <nav class="hide-nav-item">
+    <input class="menu-btn" type="checkbox" id="MENU" />
+    <label class="menu-icon" for="MENU">
+      <span class="navicon"></span>
+    </label>
+    <ul class="menu">
+      <li><a href="/">Home</a></li>
+      <% if current_user %>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/users/">Profiles</a></li>
+      <% else %> 
+        <li><a href="/login">Login</a></li>
+        <li><a href="/users/new">Register</a></li>
+      <% end %>
+      <li><a href="/articles">Articles</a></li>
+    </ul>
+  </nav>
+</header>
 </nav>
 <div class="hero-image"></div>
