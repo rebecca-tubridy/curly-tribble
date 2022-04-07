@@ -1,11 +1,19 @@
 <div class="container-fluid">
-<% if current_user %>
-    <h4> Welcome back <%= current_user.first_name %>! ♥</h4>
-    <% else %>
-    <h2 class="page-header">Welcome to my blog!</h2>
-    <p>Not a memeber yet?  <%= link_to 'Register', new_user_path %></p>
-    or 
-    <%= link_to 'Login', login_path %>
-<% end %>
-<p></p>
+  <div>
+    <div class="hero-text">
+    <hr>
+      <h2 class="about-us">꧁ Welcome ꧂</h2>
+    <hr>
+    <div class="about-us-paragraph">
+      <h4><p><u> About us </u></p></h4>
+      <p>Hi there! Welcome to Curly Tribble!<p>
+
+      <p>This is a personal recipe and blogging website dedicated to vintage recipes and ways of life. 
+      If you're interested learning how to make a bakers dozen, 
+      a double boiler or whisk up a storm then browse what we have here and enjoy the stay!</p>
+     
+      <p>〰 Curly-Tribble 〰</p>
+    </div>
+    </div>
+  </div>
 </div>

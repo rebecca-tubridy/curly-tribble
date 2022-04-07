@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    @articles = Article.all.order("created_at DESC")
   end
 
   def show
@@ -12,10 +13,13 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    if current_user != nil 
+    end
     @article = Article.new(article_params)
-
+    @article.user_id=current_user.id
     if @article.save
-      redirect_to @article
+      redirect_to article_path(@article)
+      flash[:notice] = "Successfully created article!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +31,6 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-
     if @article.update(article_params)
       redirect_to @article
     else
@@ -35,15 +38,19 @@ class ArticlesController < ApplicationController
     end
   end
 
+
   def destroy
     @article = Article.find(params[:id])
-    @article.destroy
-
-    redirect_to root_path, status: :see_other
+    if @article.discarded? 
+      @article.undiscard
+    else
+      @article.discard
+    end
+    redirect_to root_path, notice: "Article was successfully deleted"
   end
 
   private
-    def article_params
-      params.require(:article).permit(:title, :body)
-    end
+  def article_params
+    params.require(:article).permit(:title, :body)
+  end
 end

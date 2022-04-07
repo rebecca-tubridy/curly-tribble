@@ -1,0 +1,508 @@
+@import "bootstrap";
+@import "font-awesome";
+
+body {
+    font-family: 'Times New Roman', Times, serif, 'Courier New', Courier, monospace;
+    background-color: rgb(255, 249, 242);
+    color: #4a3a21!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-brand {
+    color: #d15f8b!important;
+    margin-right: 1rem;
+    font-size: 3rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.page-header {
+  text-align: center;
+  margin-top: 2%;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+li {
+  list-style: none;
+}
+
+a {
+    color: #933358!important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6ca05d!important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+}
+
+hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: none;
+    border-top: medium double rgb(39, 39, 39);
+    color: rgb(39, 39, 39);
+    text-align: center;
+}
+hr:after {
+    content: "❁";
+    background-color: rgb(255, 249, 242);
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.30em;
+}
+
+.hero-image {
+    background-image: url(curly-tribble-cut.jpg);
+    padding-top: 17.5%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-us {
+    text-align: center;
+    padding: 1%;
+}
+
+.about-us-paragraph {
+    background-image: url(flower.jpg);
+    border-radius: 5%;
+    font-size: 1.5rem;
+    box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    width: 50%; 
+    height: 25%;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-bottom: 10%;
+    padding: 5%;
+    text-align: center;
+}
+
+
+footer {
+    background-image: url(strawberry.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-size: 33vw, 34vh;
+}
+
+.article-card {
+    text-decoration: none;
+    text-align: center;
+    background-image: url(flower.jpg);
+    padding: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+}
+
+.user-card {
+    text-decoration: none;
+    text-align: center;
+    background-image: url(flower.jpg);
+    padding: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+}
+
+form {
+    margin-left: 20%;
+    padding: 5%;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Add a hover effect for buttons */
+  input:hover {
+    opacity: 0.7;
+  }
+
+  /* Add padding to containers */
+  .container-form {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+
+  }
+@media screen and (min-width: 1024px) {
+    .hide-nav-item {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    footer {
+        background-image: none!important;
+        
+    }
+
+    .card {
+        background-color: #FFF9F2;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin-top: 3%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .article-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 1%;
+        font-size: 1rem;
+        margin-bottom: 5%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+
+    ol.article-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 1%;
+        font-size: 1rem;
+        margin-left: 20%;
+        margin-bottom: 10%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    .user-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    ol.user-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        margin-left: 20%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    button {
+        margin-left: 45%!important;
+        margin-bottom: 5%;
+    }
+
+    .footer-text {
+        margin-left: 25%;
+    }
+
+    .navbar-brand {
+        color: #d15f8b!important;
+        padding-left: none;
+        font-size: 2rem;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+
+    .member-text {
+        padding-left: 14px;
+    }
+
+    //Setup
+    body {
+        margin: 0;
+        background-color: #FFF9F2;
+    }
+    a {
+        color: #000;
+    }
+    .content{
+        margin-top:25px;
+    }
+  
+  // header 
+  
+    header {
+    
+        background-color: #FFF9F2;
+        width: 100%;
+        z-index: 3;
+    
+    .logo {
+      max-width: 225px;
+      display: block;
+      float: left;
+      font-size: 1em;
+      padding: 10px 20px;
+      text-decoration: none;
+      background:#FFF9F2;
+    }
+    
+    nav{
+      width: 100%;
+          display: block;	
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: #FFF9F2;
+      }
+      li{
+        display:inline;
+        a {
+          display: block;
+  
+          font-size: 14px;
+          text-decoration: none;
+          color: grey;
+          padding: 5px;
+          &:hover{
+            text-decoration:underline;
+          }
+        }
+      }
+      .menu-btn:hover {
+        background-color: #B0C0AC;
+      }
+  
+      // menu
+      .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+      }
+  
+      // menu icon
+      .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+  
+        .navicon {
+          background: #B0C0AC;
+          display: block;
+          height: 2px;
+          position: relative;
+          transition: .2s ease-out;
+          width: 18px;
+  
+          &:before,
+          &:after{
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+          }
+          &:before{
+            top: 5px;
+          }
+          &:after{
+            top: -5px;
+          }
+        }
+  
+  
+  
+      }
+  
+      // menu btn
+      .menu-btn {
+        display: none;
+  
+        &:checked ~ .menu {
+          max-height: 240px;
+        }    
+        &:checked ~ .menu-icon .navicon {
+          background: transparent;
+          &:before {
+            transform: rotate(-45deg);
+          }
+          &:after {
+            transform: rotate(45deg);
+          }
+  
+        }
+        &:checked ~ .menu-icon:not(.steps) .navicon:before,
+        &:checked ~ .menu-icon:not(.steps) .navicon:after {
+          top: 0;
+        }
+  
+      }
+    }
+  }
+}
+  
+
+@media screen and (max-width: 425px) {
+    footer {
+        background-image: none!important;
+        
+    }
+
+    .card {
+        background-color: #FFF9F2;
+    }
+
+    .footer-text {
+        margin-left: 1%;
+    }
+    
+    .about-us-paragraph {
+        background-image: url(flower.jpg);
+        border-radius: 5%;
+        font-size: 1rem;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+        width: 60%; 
+        height: 25%;
+        margin-top: 2%;
+        margin-left: 20%;
+        margin-bottom: 15%;
+        padding: 2%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin-top: 3%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .article-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 1%;
+        font-size: 1rem;
+        margin-bottom: 5%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+
+    ol.article-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 1%;
+        font-size: 1rem;
+        margin-left: 20%;
+        margin-bottom: 10%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    .user-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    ol.user-card {
+        text-decoration: none;
+        text-align: center;
+        background-image: url(flower.jpg);
+        width: 60%; 
+        height: 25%;
+        padding: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        margin-left: 20%;
+        box-shadow: 0px 11px 15px 2px rgba(151,151,151,0.54);
+    }
+
+    button {
+        margin-left: 40%!important;
+        margin-bottom: 5%;
+    }
+      
+}

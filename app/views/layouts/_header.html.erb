@@ -1,34 +1,71 @@
-<div class="container-fluid">
-  <div class="logo">Curly-Tribble</div>
-  <div class="menu">
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link active" href="/">
-            Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <% if current_user %>
-            <a class="nav-link" href="/logout"> 
-              Logout
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid text-light">
+   <h1>
+      <a class="navbar-brand" href="/">Curly-Tribble</a>
+    </h1>
+    
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ol class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">
+              Home
             </a>
-          <% else %>   
-            <a class="nav-link" href="/login">
-              Login
+          </li>
+          <li class="nav-item text-light">
+            <% if current_user %>
+              <a class="nav-link" href="/logout">
+                Logout
+              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/"> 
+                Profiles
+              </a>
+            </li>
+            <% else %>   
+              <a class="nav-link" href="/login">
+                Login
+              </a>
+          <li class="nav-item">
+             <a class="nav-link" href="/users/new">
+                Register
             </a>
-          <% end %>  
-        <li class="nav-item">
-          <a class="nav-link" href="/users/new">
-            Register
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/articles">
-            Articles
-          </a>
-        </li>
-      </ul>
-    </nav>
+          </li>
+          <% end %>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/articles">
+              Articles
+            </a>
+          </li>
+        </ol>
+    </div>
   </div>
-</div>
+    <% if current_user %>
+    <h6 class="small member-text"> Welcome back <strong><%= current_user.first_name %>!</strong></h4>
+    <% else %>
+    <p class="small member-text">Not a memeber yet?  <%= link_to 'Register', new_user_path %>
+    or 
+    <%= link_to 'Login', login_path %></p>
+  <% end %>
+  <header>
+  <nav class="hide-nav-item">
+    <input class="menu-btn" type="checkbox" id="MENU" />
+    <label class="menu-icon" for="MENU">
+      <span class="navicon"></span>
+    </label>
+    <ul class="menu">
+      <li><a href="/">Home</a></li>
+      <% if current_user %>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/users/">Profiles</a></li>
+      <% else %> 
+        <li><a href="/login">Login</a></li>
+        <li><a href="/users/new">Register</a></li>
+      <% end %>
+      <li><a href="/articles">Articles</a></li>
+    </ul>
+  </nav>
+</header>
+</nav>
+<div class="hero-image"></div>

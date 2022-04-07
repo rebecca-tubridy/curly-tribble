@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_id(params[:id])
+    @articles = Article.all()
   end
 
   def new
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_url, notice: 'User successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity, notice: 'User not created'
     end
   end
   
@@ -27,9 +28,8 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-
     if @user.update(user_params)
-      redirect_to @article
+      redirect_to @user
     else
       render :edit, status: :unprocessable_entity
     end

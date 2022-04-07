@@ -1,14 +1,38 @@
-<h1 class="page-header">User Profile</h1>
-<h3><%= @user.first_name %></h3>
-<h3><%= @user.last_name %></h3>
-<h3><%= @user.email %></h3>
-<h3><%= @user.password %></h3>
+<hr>
+<h2 class="page-header">꧁ User Profile ꧂</h2>
+<hr>
+<ol class="user-card">
+  <h3><%= @user.full_name %></h3>
+  <h3><%= @user.email %></h3>
 
-<ul>
-  <li><%= link_to "Edit", edit_user_path(@user) %></li>
-  <li><%= link_to "Destroy", user_path(@user), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
-</ul>
+  <% if current_user == @user %>
+    <li><%= link_to "Edit", edit_user_path(@user) %></li>
+    <li><%= link_to "Destroy", user_path(@user), data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                    } %></li>
+  <% end %>
+</ol>
 
+
+<h2>Articles</h2>
+<% @user.articles.each do |article| %>
+<ol class="article-card">
+  <p>
+    <strong>Title:</strong>
+    <%= article.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= article.body %>
+  </p>
+</ol>
+<% end %>
+</ol>
+<% if current_user == @user %>
+  <h2>Add an article:</h2>
+  <button style="margin-left: 47%; margin-bottom: 5%;">
+    <%= link_to "New Article", new_article_path %>
+  </button>
+<% end %>
